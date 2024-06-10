@@ -3,9 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="css/style.css" rel="stylesheet" />
+    <title>Cadastro</title>
 </head>
 <body>
+    <header>
+        <div><img src="img/logo.png" alt="Logo"></div>
+        
+    </header>
+    <br><br><br>
+    <main>
+
+        <form>
+            <label>Nome:
+            <input type ="text" placeholder="Insira o seu nome" required>
+             </label>
+            <label>Email:
+            <input type ="email" placeholder="Insira o seu Email" required>
+             </label>
+            <label>Telefone:
+            <input type ="number" placeholder="Insira o seu telefone" required>
+             </label>
+
+            <label>Data de Nascimento:
+            <input type ="date" required >
+             </label>
+            <label>Senha:
+            <input type ="password" placeholder="Insira uma senha" required>
+             </label>
+            <label>Repetir a senha:
+            <input type ="password" placeholder="Repita a senha" required>
+             </label>
+             <br>
+             <input type="submit" value="Cadastrar" id="enviar">
+        </form>
+    </main>
     
+    <footer>
+        <p>Desenvolvido por Gabriel Batista e Gustavo Alexandre</p>
+        <p id="cefet">#CEFETMG#</p>
+    </footer>
 </body>
 </html>
