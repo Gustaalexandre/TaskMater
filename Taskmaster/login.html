@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,32 +10,36 @@
 
     <title>Login</title>
 </head>
+
 <body>
     <header>
         <div><img src="img/logo.png" alt="Logo"></div>
     </header>
+    <span class = "progress">Progresso da tarefa: </span>
+    <progress value="70" max="100"></progress>
     <main>
         <h1> Faça o Login</h1>
-
-        <label>Email:
-            <input type ="email" placeholder="Email cadastrado" required>
-        </label>
-        <label>Senha:
-            <input type ="password" placeholder="Senha cadastrada" required>
-        </label>
-        <a href="home.html"> <img src="img/entrar.png">Entrar</a>
+        <form action= "home.html">
+            <label>Email:
+                <input type="email" placeholder="Email cadastrado" required>
+            </label>
+            <label>Senha:
+                <input type="password" placeholder="Senha cadastrada" required>
+            </label>
+            <input type = "submit"  id="enviar" value="Entrar">
+        </form>
     </main>
     <br><br><br>
     <section>
-    <div style = "display: flex;">
-        <div>
-            <p >Não possui uma conta?</p>
-            <a href="cadastro.html">Criar uma conta</a>
-        </div>
-        <div style = "margin-left: 15px;">
-            <p >Esqueceu sua senha?</p>
-            <a href="">Recuperar</a>
-        </div>
+        <div style="display: flex;">
+            <div>
+                <p>Não possui uma conta?</p>
+                <a href="cadastro.html">Criar uma conta</a>
+            </div>
+            <div style="margin-left: 15px;">
+                <p>Esqueceu sua senha?</p>
+                <a href="">Recuperar</a>
+            </div>
         </div>
     </section>
 
@@ -43,6 +48,7 @@
         <p>Desenvolvido por Gabriel Batista e Gustavo Alexandre</p>
         <p id="cefet">#CEFETMG#</p>
     </footer>
-    
+
 </body>
+
 </html>
