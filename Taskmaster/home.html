@@ -24,6 +24,39 @@
     <h1>Calendário</h1>
     <a href="">Criar</a>
 
+    <!-- -------------------------------- -->
+    <style>
+      dialog {
+        border: solid 1px #ccc;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      dialog::backdrop {
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+
+      #teste :hover{
+        background: radial-gradient(circle, #83d7f8, #021aee);
+        /* opacity: 10%; */
+      }
+      </style>
+   
+
+    <dialog id="myDialog">
+      <form method="dialog">
+        <p>Gerado com sucesso!</p>
+        <button>Fechar</button>
+      </form>
+    </dialog>
+    <script>
+      function showDialog() {
+        var dialog = document.getElementById('myDialog');
+        dialog.showModal();
+      }
+    </script>
+
+    <!-- --------------------- -->
     <br>
     <br>
     <br>
@@ -71,8 +104,9 @@
         </div>
       </fieldset>
 
-      <div class = "relatoriogerar">
-        <button>Gerar relatório</button>
+      <div class="relatoriogerar">
+        <button id = "teste" onclick="showDialog()">Gerar relatório</button>
+ 
       </div>
     </div>
 

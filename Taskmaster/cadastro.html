@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,45 +8,47 @@
     <link rel="icon" type="image/png" href="img/logosemescrita.png">
     <title>Cadastro</title>
 </head>
+
 <body>
     <header>
         <div><img src="img/logo.png" alt="Logo"></div>
-        
+
     </header>
-    
+
     <main>
         <h1>Realize seu cadastro</h1>
 
         <form action="home.html">
             <label>Nome:
-            <input type ="text" placeholder="Insira o seu nome" required>
-             </label>
+                <input type="text" placeholder="Insira o seu nome" required>
+            </label>
             <label>Email:
-            <input type ="email" placeholder="Insira o seu Email" required>
-             </label>
+                <input type="email" placeholder="Insira o seu Email" required>
+            </label>
             <label>Telefone:
-            <input type ="number" placeholder="Insira o seu telefone" required>
-             </label>
-
+                <input type="number" placeholder="Insira o seu telefone" required>
+            </label>
             <label>Data de Nascimento:
-            <input type ="date" required >
-             </label>
+                <input type="date" required>
+            </label>
+            <label>Idade:
+                <input type="range" required min="0" max="100" value="50">
+            </label>
             <label>Senha:
-            <input type ="password" placeholder="Insira uma senha" required>
-             </label>
+                <input type="password" placeholder="Insira uma senha" required>
+            </label>
             <label>Repetir a senha:
-            <input type ="password" placeholder="Repita a senha" required>
-             </label>
-             <br>
-             <input type = "submit"  id="enviar" value="Cadastrar">
-               
-              
+                <input type="password" placeholder="Repita a senha" required>
+            </label>
+            <input type="submit" id="enviar" value="Cadastrar">
+
         </form>
     </main>
-    
+
     <footer>
         <p>Desenvolvido por Gabriel Batista e Gustavo Alexandre</p>
         <p id="cefet">#CEFETMG#</p>
     </footer>
 </body>
+
 </html>
