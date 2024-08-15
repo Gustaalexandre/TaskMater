@@ -142,7 +142,7 @@ main h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
 section p {
@@ -241,7 +241,7 @@ footer p{
        margin-bottom: 10%;
     }
 
-    form{
+    #FormCadastro{
         margin-bottom: 10%;
     }
 }
