@@ -7,7 +7,6 @@ body {
     padding: 0;
     box-sizing: border-box;
     word-wrap: break-word;
-
     overflow-wrap: break-word;
 
 }
@@ -20,9 +19,9 @@ body {
 header {
     background-color: #0094ba;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     box-shadow: 1px 1px 4px #000;
-    
-
 }
 
 header div img {
@@ -36,10 +35,9 @@ header div img {
 
 }
 
-
 header nav {
-    display: flex;
-    margin: 30px 10px 30px 80px;
+    /* margin-right: 0%; */
+    width: 100px;
 
 }
 
@@ -57,14 +55,15 @@ header nav a {
 
 main {
  
-    margin-left: 10px;
-    margin-right: 10px;   
+    margin-left: 5%;
+    margin-right: 5%;   
 
 }
+
 main a{
     width: 50%;
-    height: 40px;
-    display: flex;
+    /* height: 40px; */
+    /* display: flex; */
     margin: 20px auto;
      background-color: #0094ba;
      color: white;
@@ -75,14 +74,14 @@ main a{
      text-align: center;
      justify-content: center;
      text-decoration: none;
- }
+}
 
 main a img{
     width: 28px;
     margin-right: 5px;
-    
-    
+      
 }
+
 input{
     width: 100%;
     height: 20px;
@@ -109,9 +108,13 @@ input{
     background-color: #4caf50;
   }
 
-video{
-    margin-top: 50px;
-    margin-left: 15px;
+div video{
+    margin: 10%;
+    padding-bottom: 65px
+
+}
+
+  video{
     width:80%;
 }
 
@@ -135,6 +138,12 @@ main h1 {
     text-align: center;
 }
 
+.loginOpcoes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
 
 section p {
     margin-left: 10px;
@@ -163,6 +172,7 @@ section a {
 
 .cadastrar{
     display: flex;
+    justify-content:space-evenly;
     align-items: center;
 }
 
@@ -186,10 +196,58 @@ footer p{
     font-size: small;
     color: white;
     line-height: 1.5;
-    text-align: left;
+    text-align: center;
 }
 #cefet {
     margin-left: 0px;
     text-align: center;
+}
+
+/* dispositivos muito pequenos (celulares, abaixo de 600px) */
+@media only screen and (max-width: 600px) {
+    h1{
+        font-size: 2rem;
+    }
+
+    header > nav * {
+        font-size: 1.5rem;
+    }
+
+    body{
+        font-size: 1.1rem;
+    }
+
+
+}
+
+/* Dispositivos pequenos(celulares grandes e tablets em modo retato, acima de 600px) */
+@media only screen and (min-width: 600px) {
+
+    body{
+        font-size: 1.1rem;
+    }
+    
+}
+
+/* Dispositivos médios (tablets em modo paisagem, acima de 768px) */
+@media only screen and (min-width: 768px) {
+    
+    
+}
+
+/* Dispositivos grandes (notebooks e computadores, acima de 992px) */
+@media only screen and (min-width: 992px) {
+    .loginOpcoes{
+       margin-bottom: 10%;
+    }
+
+    form{
+        margin-bottom: 10%;
+    }
+}
+
+/* Dispositivos muito grandes (notebooks e computadores com tela grande, acima de 1200px) */
+@media only screen and (min-width: 1200px) {
+    
 }
 
