@@ -19,97 +19,77 @@
       <a href="landing.html">Sair</a>
     </nav>
   </header>
+  
   <main>
-
     <h1>Calendário</h1>
-    <a href="">Criar</a>
+    <a href="#" id = 'button_criar'>Criar</a>
 
-    <!-- -------------------------------- -->
-    <style>
-      dialog {
-        border: solid 1px #ccc;
-        border-radius: 8px;
-        padding: 20px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      }
-      dialog::backdrop {
-        background-color: rgba(0, 0, 0, 0.3);
-      }
-
-      #teste:hover{
-        background: radial-gradient(circle, #ffffff, #3681f1);
-        /* opacity: 10%; */
-      }
-      </style>
-   
-
-    <dialog id="myDialog">
-      <form method="dialog">
-        <p>Gerado com sucesso!</p>
-        <button>Fechar</button>
-      </form>
-    </dialog>
-    <script>
-      function showDialog() {
-        var dialog = document.getElementById('myDialog');
-        dialog.showModal();
-      }
-    </script>
-
-    <!-- --------------------- -->
-    <br>
-    <br>
-    <br>
-
-    <div>
-      <button type="submit"><b>JAN</b></button>
-      <button type="submit"><b>FEV</b></button>
-      <button type="submit"><b>MAR</b></button>
-      <button type="submit"><b>ABR</b></button>
+    <!-- Modal Structure -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p id = 'txtModal'>Algum texto na Modal.</p>
+      </div>
     </div>
 
-    <div>
-      <button type="submit"><b>MAI</b></button>
-      <button type="submit"><b>JUN</b></button>
-      <button type="submit"><b>JUL</b></button>
-      <button type="submit"><b>AGO</b></button>
-    </div>
+    <!-- Buttons for the Months -->
+    <section id='botoes'>
+      <div class='meses'>
+        <button type="button" id='jan'><b>JAN</b></button>
+        <button type="button" id='fev'><b>FEV</b></button>
+        <button type="button" id='mar'><b>MAR</b></button>
+        <button type="button" id='abr'><b>ABR</b></button>
+      </div>
 
-    <div>
-      <button type="submit"><b>SET</b></button>
-      <button type="submit"><b>OUT</b></button>
-      <button type="submit"><b>NOV</b></button>
-      <button type="submit"><b>DEZ</b></button>
-    </div>
+      <div class='meses'>
+        <button type="button" id='mai'><b>MAI</b></button>
+        <button type="button" id='jun'><b>JUN</b></button>
+        <button type="button" id='jul'><b>JUL</b></button>
+        <button type="button" id='ago'><b>AGO</b></button>
+      </div>
 
-    <br>
+      <div class='meses'>
+        <button type="button" id='set'><b>SET</b></button>
+        <button type="button" id='out'><b>OUT</b></button>
+        <button type="button" id='nov'><b>NOV</b></button>
+        <button type="button" id='dez'><b>DEZ</b></button>
+      </div>
+    </section>
 
+    <!-- Radio buttons for reports -->
     <div class="radio-buttons">
       <fieldset>
         <legend>Selecione qual relatório deseja:</legend>
 
         <div>
           <input type="radio" id="anual" name="drone" value="anual" checked />
-          <label for="anual">anual</label>
+          <label for="anual">Anual</label>
         </div>
 
         <div>
           <input type="radio" id="mensal" name="drone" value="mensal" />
-          <label for="dewey">mensal</label>
+          <label for="mensal">Mensal</label>
         </div>
 
         <div>
           <input type="radio" id="semanal" name="drone" value="semanal" />
-          <label for="louie">semanal</label>
+          <label for="semanal">Semanal</label>
         </div>
       </fieldset>
 
       <div class="relatoriogerar">
-        <button id = "teste" onclick="showDialog()">Gerar relatório</button>
- 
+        <button id="teste" onclick="showDialog()">Gerar relatório</button>
       </div>
     </div>
 
+    <!-- Dialog for report generation confirmation -->
+    <dialog id="myDialog">
+      <form method="dialog">
+        <p>Gerado com sucesso!</p>
+        <button>Fechar</button>
+      </form>
+    </dialog>
+    
   </main>
 
   <footer>
@@ -117,6 +97,8 @@
     <p id="cefet">#CEFETMG#</p>
   </footer>
 
+  <!-- JavaScript -->
+  <script src="scriptHome.js"></script>
 </body>
 
 </html>

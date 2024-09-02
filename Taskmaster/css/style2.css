@@ -1,119 +1,212 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* Importação de fontes */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
-html,
-body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+/* Estilos globais */
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 * {
-    font-family: 'Roboto', sans-serif;
-    text-align: left;
+  font-family: 'Roboto', sans-serif;
+  text-align: left;
 }
 
 header {
-    background-color: #0094ba;
-    display: flex;
-    box-shadow: 1px 1px 4px #000;
+  background-color: #0094ba;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 1px 1px 4px #000;
 }
 
 header div img {
-    border-style: ridge;
-    border-color: aliceblue;
-    margin-left: 10px;
-    margin-top: 10px;
-    margin-right: 100px;
-    width: 80px;
+  border-style: ridge;
+  border-color: aliceblue;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-right: 100px;
+  width: 80px;
 }
 
 header nav {
-    display: flex;
-    margin: 30px 10px 30px 80px;
+  width: 150px;
 }
 
 header nav a {
-    color: #0094ba;
-    text-decoration: none;
-    background-color: white;
-    padding: 10px;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 1px 1px 5px #000;
-    font-weight: bold;
+  color: #0094ba;
+  text-decoration: none;
+  background-color: white;
+  padding: 10px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 1px 1px 5px #000;
+  font-weight: bold;
 }
 
 main h1 {
-    margin-left: 15px;
-    display: inline-block;
+  margin-left: 15px;
+  display: inline-block;
 }
 
 main a {
-    display: inline-block;
-    color: white;
-    text-decoration: none;
-    background-color: #0094ba;
-    padding: 10px;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 1px 1px 5px #000;
-    font-weight: bold;
-    margin-left: 96px;
-    margin-right: 10px;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  background-color: #0094ba;
+  padding: 10px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 1px 1px 5px #000;
+  font-weight: bold;
+  margin-left: 96px;
+  margin-right: 10px;
 }
 
 main button {
-    background-color: #0094ba;
-    padding: 20px;
-    margin: 5px 8px 30px 8px;
-    border-radius: 20px;
-    color: white;
-    text-align: center;
+  background-color: #0094ba;
+  padding: 20px;
+  margin: 5px 8px 30px 8px;
+  border-radius: 20px;
+  color: white;
+  text-align: center;
 }
 
 .relatoriogerar {
-    margin-right: 10px;
-
+  margin-right: 10px;
 }
 
-
 fieldset {
-    border: none;
-    font-family: 'Roboto', sans-serif;
-    font-size: 18px;
+  border: none;
+  font-size: 18px;
 }
 
 .radio-buttons {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .radio-buttons fieldset {
-    margin-right: 20px;
+  margin-right: 20px;
 }
 
-
 footer {
-    background-color: #0094ba;
-    position: fixed;
-    bottom: 0;
-    box-shadow: -1px -1px 3px #000;
-    width: 100%;
-    padding: 5px;
+  background-color: #0094ba;
+  position: fixed;
+  bottom: 0;
+  box-shadow: -1px -1px 3px #000;
+  width: 100%;
+  padding: 5px;
 }
 
 footer p {
-    margin-left: 10px;
-    margin-right: 10px;
-    font-size: small;
-    color: white;
-    line-height: 1.5;
-    text-align: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: small;
+  color: white;
+  line-height: 1.5;
+  text-align: left;
 }
 
 #cefet {
-    margin-left: 0px;
-    text-align: center;
+  margin-left: 0px;
+  text-align: center;
+}
+
+.modal {
+    display: none; /* Esconder a modal por padrão */
+    position: fixed; /* Fica fixa na tela */
+    z-index: 1; /* Fica acima dos outros conteúdos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Largura completa da tela */
+    height: 100%; /* Altura completa da tela */
+    overflow: auto; /* Permite rolar se necessário */
+    background-color: rgba(0,0,0,0.4); /* Cor de fundo escurecida */
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* Margem superior e centralização horizontal */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Largura da modal */
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* dispositivos muito pequenos (celulares, abaixo de 600px) */
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  header > nav * {
+    font-size: 1.5rem;
+  }
+
+  body {
+    font-size: 1.1rem;
+  }
+
+  #botoes {
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+  }
+
+  .meses button {
+    padding: 15px;
+    margin: 10px;
+  }
+
+  .radio-buttons {
+    display: block;
+  }
+
+  .relatoriogerar {
+    margin-top: 1.5rem;
+  }
+}
+
+/* Dispositivos pequenos (celulares grandes e tablets em modo retrato, acima de 600px) */
+@media only screen and (min-width: 600px) {
+  body {
+    font-size: 1.1rem;
+  }
+}
+
+/* Dispositivos médios (tablets em modo paisagem, acima de 768px) */
+@media only screen and (min-width: 768px) {
+  /* estilos adicionais para dispositivos médios */
+}
+
+/* Dispositivos grandes (notebooks e computadores, acima de 992px) */
+@media only screen and (min-width: 992px) {
+  .loginOpcoes {
+    margin-bottom: 10%;
+  }
+
+  #FormCadastro {
+    margin-bottom: 10%;
+  }
+}
+
+/* Dispositivos muito grandes (notebooks e computadores com tela grande, acima de 1200px) */
+@media only screen and (min-width: 1200px) {
+  .loginOpcoes {
+    margin-bottom: 20%;
+  }
 }
