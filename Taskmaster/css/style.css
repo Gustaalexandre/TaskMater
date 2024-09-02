@@ -204,6 +204,12 @@ footer p{
     text-align: center;
 }
 
+.scrollable {
+    width: 300px;  /* Largura do elemento */
+    height: 200px; /* Altura do elemento */
+    overflow: auto; /* Barra de rolagem aparece automaticamente quando necessário */
+}
+
 /* dispositivos muito pequenos (celulares, abaixo de 600px) */
 @media only screen and (max-width: 600px) {
     h1{
