@@ -75,6 +75,11 @@ main .button_criar {
   /* Espaçamento do topo */
 }
 
+#button_concluir{
+  padding: 3px;
+
+}
+
 section {
   margin-top: 15px;
 }
@@ -270,6 +275,10 @@ footer p {
 
 /* Dispositivos muito grandes (notebooks e computadores com tela grande, acima de 1200px) */
 @media only screen and (min-width: 1200px) {
+  section{
+    margin-bottom: 150px;
+  }
+  
   .meses {
     justify-content: space-between;
   }

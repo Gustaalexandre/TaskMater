@@ -42,15 +42,20 @@ function abrirModalCriacao() {
     texto.innerHTML = '';
 
     // Criar elementos do formulário
+    const labelTarefa = document.createElement("label");
+    labelTarefa.style.display = 'block'; // Define o label para ocupar uma linha inteira
+    labelTarefa.style.marginBottom = '10px'; // Adiciona espaçamento inferior
+    labelTarefa.innerText = "Selecione o nome da Tarefa:";
+
     const inputTarefa = document.createElement("input");
     inputTarefa.setAttribute("type", "text");
     inputTarefa.setAttribute("placeholder", "Informe o título da tarefa...");
     inputTarefa.style.display = 'block'; // Define o input para ocupar uma linha inteira
-    inputTarefa.style.marginBottom = '10px'; // Adiciona espaçamento inferior
+    inputTarefa.style.marginBottom = '20px'; // Adiciona espaçamento inferior
 
     const labelMes = document.createElement("label");
     labelMes.style.display = 'block'; // Define o label para ocupar uma linha inteira
-    labelMes.style.marginBottom = '20px'; // Adiciona espaçamento inferior
+    labelMes.style.marginBottom = '10px'; // Adiciona espaçamento inferior
     labelMes.innerText = "Selecione o Mês:";
 
     const selectMes = document.createElement("select");
@@ -78,7 +83,6 @@ function abrirModalCriacao() {
         const mesSelecionado = selectMes.value;
 
         if (tarefa && mesSelecionado) {
-            // Adicionar a tarefa ao mês selecionado usando o método spread para imitar a manipulação direta do array
             tarefasPorMes[mesSelecionado] = [...tarefasPorMes[mesSelecionado], tarefa];
             salvarTarefas(); // Salvar tarefas no localStorage
             alert(`Tarefa "${tarefa}" cadastrada para o mês de ${mesSelecionado.toUpperCase()}!`);
@@ -90,6 +94,7 @@ function abrirModalCriacao() {
     });
 
     // Adicionar os elementos ao modal
+    texto.appendChild(labelTarefa);
     texto.appendChild(inputTarefa);
     texto.appendChild(labelMes);
     texto.appendChild(selectMes);
@@ -104,13 +109,28 @@ function mostrarTarefas(mes) {
     // Limpar o conteúdo anterior do modal
     texto.innerHTML = '';
 
-    // Exibir a lista de tarefas do mês usando map e join
+    // Exibir a lista de tarefas do mês
     const tarefasDoMes = tarefasPorMes[mes];
-    const listaTarefas = tarefasDoMes.length > 0
-        ? `<ul>${tarefasDoMes.map(tarefa => `<li>${tarefa}</li>`).join('')}</ul>`
-        : `Nenhuma tarefa cadastrada para ${mes.toUpperCase()}.`;
+    if (tarefasDoMes.length > 0) {
+        const listaTarefas = tarefasDoMes.map((tarefa, index) => `
+            <li>
+                ${tarefa}
+                <button id = "button_concluir" onclick="concluirTarefa('${mes}', ${index})">✔</button>
+            </li>
+        `).join('');
+        texto.innerHTML = `<ul>${listaTarefas}</ul>`;
+    } else {
+        texto.innerHTML = `Nenhuma tarefa cadastrada para ${mes.toUpperCase()}.`;
+    }
+}
 
-    texto.innerHTML = listaTarefas;
+// Função para concluir uma tarefa
+function concluirTarefa(mes, index) {
+    if (confirm('Deseja concluir esta tarefa?')) {
+        tarefasPorMes[mes].splice(index, 1); // Remove a tarefa da lista
+        salvarTarefas(); // Atualiza o localStorage
+        mostrarTarefas(mes); // Atualiza a visualização das tarefas
+    }
 }
 
 // Adicionar evento de clique ao botão "Criar"
@@ -146,4 +166,3 @@ document.getElementById('dez').addEventListener('click', () => { mostrarTarefas(
 
 // Carregar tarefas do localStorage quando a página é carregada
 carregarTarefas();
-
