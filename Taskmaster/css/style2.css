@@ -2,7 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 /* Estilos globais */
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -20,27 +21,26 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px 20px;
   box-shadow: 1px 1px 4px #000;
 }
 
 header div img {
   border-style: ridge;
   border-color: aliceblue;
-  margin-left: 10px;
-  margin-top: 10px;
-  margin-right: 100px;
+  margin: 10px;
   width: 80px;
 }
 
 header nav {
-  width: 150px;
+  width: auto;
 }
 
 header nav a {
   color: #0094ba;
   text-decoration: none;
   background-color: white;
-  padding: 10px;
+  padding: 10px 20px;
   border-radius: 15px;
   text-align: center;
   box-shadow: 1px 1px 5px #000;
@@ -48,8 +48,9 @@ header nav a {
 }
 
 main h1 {
-  margin-left: 15px;
-  display: inline-block;
+  text-align: center;
+  /* Centraliza a palavra "Calendário" */
+  margin: 20px 0;
 }
 
 main a {
@@ -57,26 +58,45 @@ main a {
   color: white;
   text-decoration: none;
   background-color: #0094ba;
-  padding: 10px;
+  padding: 10px 20px;
   border-radius: 15px;
   text-align: center;
   box-shadow: 1px 1px 5px #000;
   font-weight: bold;
-  margin-left: 96px;
-  margin-right: 10px;
+  margin-left: 10px;
+}
+
+main .button_criar {
+  position: absolute;
+  /* Posiciona o botão na lateral direita */
+  right: 20px;
+  /* Espaçamento da borda direita */
+  top: 20px;
+  /* Espaçamento do topo */
+}
+
+section {
+  margin-top: 15px;
 }
 
 main button {
   background-color: #0094ba;
-  padding: 20px;
-  margin: 5px 8px 30px 8px;
-  border-radius: 20px;
+  padding: 15px 20px;
+  margin: 10px;
+  border-radius: 5px;
+  /* Botões mais quadrados */
   color: white;
   text-align: center;
 }
 
 .relatoriogerar {
-  margin-right: 10px;
+  margin: 20px 10px;
+}
+
+.radio-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 fieldset {
@@ -84,67 +104,46 @@ fieldset {
   font-size: 18px;
 }
 
-.radio-buttons {
-  display: flex;
-  align-items: center;
-}
-
-.radio-buttons fieldset {
-  margin-right: 20px;
-}
-
 footer {
   background-color: #0094ba;
-  position: fixed;
-  bottom: 0;
   box-shadow: -1px -1px 3px #000;
   width: 100%;
   padding: 5px;
+  position: fixed;
+  bottom: 0;
 }
 
 footer p {
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: 5px 10px;
   font-size: small;
   color: white;
   line-height: 1.5;
-  text-align: left;
-}
-
-#cefet {
-  margin-left: 0px;
   text-align: center;
 }
 
-.modal {
-    display: none; /* Esconder a modal por padrão */
-    position: fixed; /* Fica fixa na tela */
-    z-index: 1; /* Fica acima dos outros conteúdos */
-    left: 0;
-    top: 0;
-    width: 100%; /* Largura completa da tela */
-    height: 100%; /* Altura completa da tela */
-    overflow: auto; /* Permite rolar se necessário */
-    background-color: rgba(0,0,0,0.4); /* Cor de fundo escurecida */
+#cefet {
+  text-align: center;
 }
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* Margem superior e centralização horizontal */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Largura da modal */
+
+/* Ajuste para os botões dos meses */
+.meses {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+
+.meses button {
+  background-color: #0094ba;
+  padding: 30px;
+  margin: 10px;
+  border-radius: 5px;
+  /* Botões mais quadrados */
+  color: white;
+  text-align: center;
+  flex: 1 1 calc(25% - 20px);
+  /* Ajuste para ocupar toda a largura da tela */
+  max-width: calc(25% - 20px);
 }
 
 .modal {
@@ -158,13 +157,16 @@ footer p {
   background-color: rgba(0, 0, 0, 0.4);
   overflow: auto;
 }
+
 .modal-show {
   display: block;
   animation: fadeIn 0.5s;
 }
+
 .modal-hide {
   display: none;
 }
+
 .modal-content {
   background-color: #fefefe;
   margin: 15% auto;
@@ -172,12 +174,14 @@ footer p {
   border: 1px solid #888;
   width: 80%;
 }
+
 .close {
   color: #aaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
 }
+
 .close:hover,
 .close:focus {
   color: black;
@@ -185,66 +189,100 @@ footer p {
   cursor: pointer;
 }
 
-/* dispositivos muito pequenos (celulares, abaixo de 600px) */
+/* Responsividade */
+
+/* Dispositivos muito pequenos (celulares, abaixo de 600px) */
 @media only screen and (max-width: 600px) {
-  h1 {
+  header {
+    align-items: center;
+  }
+
+  header nav {
+    margin-top: 10px;
+  }
+
+  main h1 {
     font-size: 2rem;
   }
 
-  header > nav * {
-    font-size: 1.5rem;
+  main a {
+    margin-left: 0;
+    margin-top: 10px;
   }
 
-  body {
-    font-size: 1.1rem;
-  }
-
-  #botoes {
-    justify-content: space-between;
-    align-items: center;
-    align-content: center;
+  .meses {
+    justify-content: center;
   }
 
   .meses button {
-    padding: 15px;
-    margin: 10px;
+    flex: 1 1 calc(45% - 20px);
+    /* Ajusta a largura dos botões em telas menores */
+    max-width: none;
+    /* Remove o limite de largura */
+    padding: 10px;
   }
 
   .radio-buttons {
-    display: block;
+    align-items: center;
   }
 
   .relatoriogerar {
-    margin-top: 1.5rem;
-  }
-}
-
-/* Dispositivos pequenos (celulares grandes e tablets em modo retrato, acima de 600px) */
-@media only screen and (min-width: 600px) {
-  body {
-    font-size: 1.1rem;
+    margin-top: 20px;
   }
 }
 
 /* Dispositivos médios (tablets em modo paisagem, acima de 768px) */
 @media only screen and (min-width: 768px) {
-  /* estilos adicionais para dispositivos médios */
+  .meses {
+    justify-content: space-between;
+  }
+
+  .meses button {
+    flex: 1 1 calc(25% - 20px);
+    /* Espaçamento ajustado para dispositivos maiores */
+  }
+
+  .radio-buttons {
+    flex-direction: row;
+    align-items: center;
+  }
 }
 
 /* Dispositivos grandes (notebooks e computadores, acima de 992px) */
 @media only screen and (min-width: 992px) {
-  .loginOpcoes {
-    margin-bottom: 10%;
+  .meses {
+    justify-content: space-between;
   }
 
-  #FormCadastro {
-    margin-bottom: 10%;
+  .meses button {
+    flex: 1 1 calc(25% - 20px);
+    /* Continua ocupando toda a largura */
+  }
+
+  .radio-buttons fieldset {
+    margin-right: 20px;
+  }
+
+  .relatoriogerar {
+    margin-top: 0;
   }
 }
 
 /* Dispositivos muito grandes (notebooks e computadores com tela grande, acima de 1200px) */
 @media only screen and (min-width: 1200px) {
-  .loginOpcoes {
-    margin-bottom: 20%;
+  .meses {
+    justify-content: space-between;
+  }
+
+  .meses button {
+    flex: 1 1 calc(25% - 20px);
+  }
+
+  footer {
+    padding: 10px;
+  }
+
+  footer p {
+    font-size: medium;
   }
 }

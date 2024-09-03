@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,9 +9,7 @@
   <link rel="icon" type="image/png" href="img/logosemescrita.png">
   <title>Task-Master</title>
 </head>
-
 <body>
-
   <header>
     <div><img src="img/logo.png" alt="Logo"></div>
     <nav>
@@ -22,13 +19,13 @@
   
   <main>
     <h1>Calendário</h1>
-    <a href="#" id = 'button_criar'>Criar</a>
+    <a href="#" id='button_criar'>Criar</a>
 
     <!-- Modal Structure -->
     <div id="myModal" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
-        <p id = 'txtModal'>Algum texto na Modal.</p>
+        <p id='txtModal'>Algum texto na Modal.</p>
       </div>
     </div>
 
@@ -40,14 +37,12 @@
         <button type="button" id='mar'><b>MAR</b></button>
         <button type="button" id='abr'><b>ABR</b></button>
       </div>
-
       <div class='meses'>
         <button type="button" id='mai'><b>MAI</b></button>
         <button type="button" id='jun'><b>JUN</b></button>
         <button type="button" id='jul'><b>JUL</b></button>
         <button type="button" id='ago'><b>AGO</b></button>
       </div>
-
       <div class='meses'>
         <button type="button" id='set'><b>SET</b></button>
         <button type="button" id='out'><b>OUT</b></button>
@@ -60,23 +55,19 @@
     <div class="radio-buttons">
       <fieldset>
         <legend>Selecione qual relatório deseja:</legend>
-
         <div>
           <input type="radio" id="anual" name="drone" value="anual" checked />
           <label for="anual">Anual</label>
         </div>
-
         <div>
           <input type="radio" id="mensal" name="drone" value="mensal" />
           <label for="mensal">Mensal</label>
         </div>
-
         <div>
           <input type="radio" id="semanal" name="drone" value="semanal" />
           <label for="semanal">Semanal</label>
         </div>
       </fieldset>
-
       <div class="relatoriogerar">
         <button id="teste" onclick="showDialog()">Gerar relatório</button>
       </div>
@@ -89,7 +80,6 @@
         <button>Fechar</button>
       </form>
     </dialog>
-    
   </main>
 
   <footer>
@@ -100,5 +90,4 @@
   <!-- JavaScript -->
   <script src="scriptHome.js"></script>
 </body>
-
 </html>
