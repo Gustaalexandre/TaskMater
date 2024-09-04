@@ -20,3 +20,7 @@ Marcação de Tarefas Concluídas: Facilidade para marcar tarefas como concluíd
 
 Persistência de Dados: Todos os dados dos usuários, incluindo tarefas e preferências, são armazenados de forma segura utilizando LocalStorage e SessionStorage, garantindo que as informações estejam sempre disponíveis mesmo após o fechamento do navegador.
 
+<div align = "center">
+<img src="Prints&Gifs/cadastroELogin.png" alt = "Tela cadastro e login" width="50%"/>
+</div>
+
