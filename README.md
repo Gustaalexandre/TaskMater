@@ -31,4 +31,10 @@ Persistência de Dados: Todos os dados dos usuários, incluindo tarefas e prefer
 <div align = "center">
 <img src="Prints&Gifs/cadastroELogin.png" alt = "Tela cadastro e login" width="50%"/>
 </div>
+<br>
+
+<h2>Home: </h2>
+<div align = "center">
+<img src="Prints&Gifs/Home.png" alt = "Tela Home" width="20%"/>
+</div>
 
