@@ -35,6 +35,6 @@ Persistência de Dados: Todos os dados dos usuários, incluindo tarefas e prefer
 
 <h2>Home: </h2>
 <div align = "center">
-<img src="Prints&Gifs/Home.png" alt = "Tela Home" width="20%"/>
+<img src="Prints&Gifs/Home.gif" alt = "Tela Home" width="80%"/>
 </div>
 
