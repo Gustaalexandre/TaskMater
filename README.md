@@ -19,7 +19,11 @@ Gerenciamento de Tarefas: Usuários podem cadastrar novas tarefas associando-as 
 Marcação de Tarefas Concluídas: Facilidade para marcar tarefas como concluídas, permitindo um acompanhamento eficaz do progresso de cada mês.
 
 Persistência de Dados: Todos os dados dos usuários, incluindo tarefas e preferências, são armazenados de forma segura utilizando LocalStorage e SessionStorage, garantindo que as informações estejam sempre disponíveis mesmo após o fechamento do navegador.
+<br>
+<h2>Landing:</h2>
 
+<br>
+<h2>Cadastro e Login: </h2>
 <div align = "center">
 <img src="Prints&Gifs/cadastroELogin.png" alt = "Tela cadastro e login" width="50%"/>
 </div>
